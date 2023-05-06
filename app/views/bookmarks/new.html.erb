@@ -1,0 +1,11 @@
+<h1>Create a new bookmark</h1>
+
+<%= link_to "Back to all lists", lists_path %>
+
+
+<%= simple_form_for [@list, @bookmark] do |f| %>
+   <%= f.association :movie %>
+   <%= f.input :comment %>
+
+   <%= f.submit %>
+<% end %>
